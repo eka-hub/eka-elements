@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
-import css from "./css.module.scss";
+import css from "./Button.module.scss";
 import { ReactSVG } from "react-svg";
 
 const Button = ({
@@ -11,9 +11,8 @@ const Button = ({
   iconRight = false,
   iconSpin = false,
   type = "default",
-  ...props
+  ...rest
 }) => {
-
   const iconElement = icon && <ReactSVG src={require(`../icons/${icon}.svg`).default} wrapper={`span`} />;
 
   return (
@@ -27,11 +26,10 @@ const Button = ({
         iconRight && css["icon-right"],
         iconSpin && css["icon-spin"]
       )}
-      {...props}
+      {...rest}
     >
       {!iconRight && iconElement}
       {children}
-
       {iconRight && iconElement}
     </button>
   );
