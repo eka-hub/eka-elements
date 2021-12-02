@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
+
+// colors
+$light-01: #f3f3f3;
+$light-02: #edf2f3;
+$light-03: #e3e9e9;
+$grey-01: #646c7e;
+$grey-02: #555555;
+$grey-03: #737e8d;
+$dark-01: #151515;
+$dark-02: #242323;
+$accent-01: #0097a1;
+$accent-02: #003c40;
+$red: #eb5757;
+$orange: #f2994a;
+$yellow: #f2c94c;
+
+// measures
+$border-radius: 13px;
+
+// default styles
+* {
+  font-family: "Nunito", sans-serif;
+  color: $dark-01;
+}

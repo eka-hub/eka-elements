@@ -1,0 +1,89 @@
+@import "../constants.scss";
+
+.button {
+  border: 1px solid transparent;
+  appearance: none;
+  transition: all 0.15s;
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 16px;
+  border-radius: $border-radius;
+  padding: 8px 16px;
+  outline-color: $accent-01;
+
+  &.with-icon {
+    > span {
+      height: 22px;
+      width: 22px;
+      margin-right: 8px;
+      svg {
+        height: 22px;
+        width: 22px;
+      }
+    }
+  }
+
+  &.icon-right {
+    > span {
+      margin-left: 8px;
+      margin-right: 0px;
+    }
+  }
+  &.icon-spin {
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    > span {
+      animation-name: spin;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+
+  // states
+  &:hover:not(:disabled) {
+    cursor: pointer;
+    opacity: 0.75;
+  }
+  &:active {
+    opacity: 0.5 !important;
+  }
+  &:disabled {
+    cursor: not-allowed !important;
+    opacity: 0.35 !important;
+  }
+
+  &.square {
+    padding: 8px;
+    > span {
+      margin: 0px;
+    }
+  }
+
+  // styles
+  &.default {
+    background: $dark-01;
+    color: $light-01;
+  }
+
+  &.secondary {
+    background: $light-02;
+  }
+
+  &.empty {
+    background: transparent;
+  }
+
+  &.border {
+    background: transparent;
+    border-color: $light-03;
+  }
+}
