@@ -1,4 +1,6 @@
+import Blocks from "./Blocks";
 import Buttons from "./Buttons";
+import Dots from "./Dots";
 
 function Example() {
   return (
@@ -6,6 +8,9 @@ function Example() {
       <hr />
       <Buttons />
       <hr />
+      <Blocks />
+      <hr />
+      <Dots />
     </>
   );
 }

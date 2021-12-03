@@ -1,0 +1,11 @@
+@import "../constants.scss";
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background-color: $grey-03;
+  &.active {
+    background-color: $accent-01;
+  }
+}

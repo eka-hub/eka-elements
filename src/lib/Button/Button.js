@@ -2,19 +2,17 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 import css from "./Button.module.scss";
-import { ReactSVG } from "react-svg";
+import { Icon } from "..";
 
 const Button = ({
-  className,
-  children,
+  className = "",
+  children = "",
   icon = null,
   iconRight = false,
   iconSpin = false,
   type = "default",
   ...rest
 }) => {
-  const iconElement = icon && <ReactSVG src={require(`../icons/${icon}.svg`).default} wrapper={`span`} />;
-
   return (
     <button
       className={cn(
@@ -23,14 +21,13 @@ const Button = ({
         css[type],
         !children && css["square"],
         icon && css["with-icon"],
-        iconRight && css["icon-right"],
-        iconSpin && css["icon-spin"]
+        iconRight && css["icon-right"]
       )}
       {...rest}
     >
-      {!iconRight && iconElement}
+      {!iconRight && <Icon icon={icon} spin={iconSpin} />}
       {children}
-      {iconRight && iconElement}
+      {iconRight && <Icon icon={icon} spin={iconSpin} />}
     </button>
   );
 };
@@ -41,7 +38,7 @@ Button.propTypes = {
   icon: PropTypes.string,
   iconRight: PropTypes.bool,
   iconSpin: PropTypes.bool,
-  children: PropTypes.string || PropTypes.any,
+  children: PropTypes.string,
 };
 
 export default Button;
