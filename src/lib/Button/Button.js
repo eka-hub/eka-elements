@@ -7,7 +7,7 @@ import { Icon } from "..";
 const Button = ({
   className = "",
   children = "",
-  icon = null,
+  icon = "",
   iconRight = false,
   iconSpin = false,
   type = "default",
@@ -34,11 +34,12 @@ const Button = ({
 
 Button.propTypes = {
   className: PropTypes.string,
-  type: PropTypes.oneOf(["default", "border", "secondary", "empty"]),
   icon: PropTypes.string,
   iconRight: PropTypes.bool,
   iconSpin: PropTypes.bool,
+  type: PropTypes.oneOf(["default", "border", "secondary", "empty"]),
   children: PropTypes.string,
+  rest: PropTypes.any,
 };
 
 export default Button;

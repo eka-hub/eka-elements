@@ -1,18 +1,25 @@
 import { Button } from "../lib";
+import { useDarkMode } from "./_hooks";
 
 const Div = ({ ...rest }) => <div style={{ margin: "10px", display: "flex", gap: "10px" }} {...rest} />;
 
 const Buttons = () => {
+  const { dark, toggleMode, setMode } = useDarkMode();
+
   return (
     <>
       <Div>
-        <Button icon="attachment">Click</Button>
-        <Button icon="alarm" iconRight>
+        <Button icon={dark ? "sun" : "moon"} onClick={toggleMode}>
           Click
         </Button>
-        <Button>Click</Button>
+        <Button icon="alarm" iconRight onClick={() => setMode("dark")}>
+          Click
+        </Button>
+        <Button onClick={() => setMode("light")}>Click</Button>
         <Button icon="arrow-down" />
-        <Button icon="refresh" disabled iconSpin>Click</Button>
+        <Button icon="refresh" disabled iconSpin>
+          Click
+        </Button>
       </Div>
       <Div>
         <Button type="secondary" icon="cross-square">

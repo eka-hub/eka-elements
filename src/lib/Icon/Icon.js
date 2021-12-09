@@ -4,23 +4,14 @@ import { ReactSVG } from "react-svg";
 import cn from "classnames";
 import css from "./Icon.module.scss";
 
-const Icon = ({ className = "", spin = false, icon = null, ...rest }) => {
+const Icon = ({ className = "", spin = false, icon = "", ...rest }) => {
   let svg;
   try {
     svg = require(`../_icons/${icon}.svg`).default;
   } catch {
     svg = null;
   }
-  return (
-    icon && svg && (
-      <ReactSVG
-        src={svg}
-        wrapper={`span`}
-        className={cn([className, spin && css.spin])}
-        {...rest}
-      />
-    )
-  );
+  return icon && svg && <ReactSVG src={svg} wrapper={`span`} className={cn([className, spin && css.spin])} {...rest} />;
 };
 
 Icon.propTypes = {

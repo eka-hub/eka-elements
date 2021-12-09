@@ -10,7 +10,7 @@ describe("Dot test", () => {
     expect(container.querySelector(`.${className}`)).toBeInTheDocument();
   });
   
-  test("Should has an active state", () => {
+  test("Should have an active state", () => {
     const { container } = render(<Dot state="active" />);
     expect(container.querySelector(`.active`)).toBeInTheDocument();
   });

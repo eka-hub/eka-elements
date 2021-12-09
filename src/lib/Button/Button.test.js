@@ -7,7 +7,7 @@ import Button from "./Button";
 const content = "text";
 
 describe("Button test", () => {
-  test("Should has an icon", () => {
+  test("Should have an icon", () => {
     const { container } = render(<Button icon="alarm" />);
     const icon = container.querySelector('[data-src="alarm.svg"]');
     expect(icon).toBeInTheDocument();

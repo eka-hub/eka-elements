@@ -38,6 +38,7 @@
   }
   &:active {
     opacity: 0.5 !important;
+    box-shadow: none;
   }
   &:disabled {
     cursor: not-allowed !important;
@@ -46,18 +47,39 @@
 
   // styles
   &.default {
-    background: $dark-01;
+    background-color: $dark-01;
     color: $light-01;
+    box-shadow: $box-shadow;
+    @include icon-color($light-01);
+
+    @include dark-mode {
+      background: $light-01;
+      color: $dark-01;
+      @include icon-color($dark-01);
+    }
   }
   &.secondary {
     background: $light-02;
+    @include dark-mode {
+      background: $dark-01;
+      color: $light-01;
+      @include icon-color($light-01);
+    }
   }
   &.empty {
     background: transparent;
+    @include dark-mode {
+      color: $light-01;
+      @include icon-color($light-01);
+    }
   }
   &.border {
     background: transparent;
     border-color: $light-03;
+    @include dark-mode {
+      color: $light-01;
+      @include icon-color($light-01);
+    }
   }
   &.square {
     padding: 8px;
