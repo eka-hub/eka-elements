@@ -30,6 +30,18 @@ describe("MenuItem test", () => {
     expect(icon).toBeInTheDocument();
   });
 
+  test("Should have an indicator", () => {
+    const { container } = render(
+      <MemoryRouter>
+        <MenuItem icon="calendar" indicate>
+          {content}
+        </MenuItem>
+      </MemoryRouter>
+    );
+    const indicator = container.querySelector(".indicator");
+    expect(indicator).toBeInTheDocument();
+  });
+
   test("Should be a link", () => {
     const { container } = render(
       <MemoryRouter>

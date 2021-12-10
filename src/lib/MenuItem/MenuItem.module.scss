@@ -34,6 +34,12 @@
     }
   }
 
+  .indicator {
+    display: inline-flex;
+    align-self: center;
+    margin-left: auto;
+  }
+
   // states
   &:hover:not(:disabled, &.active) {
     cursor: pointer;

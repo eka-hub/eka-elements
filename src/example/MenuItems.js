@@ -18,7 +18,7 @@ const MenuItems = () => {
           Покупки
         </MenuItem>
         <br />
-        <MenuItem to="/contacts" icon="phone" active={pathname === "/contacts"}>
+        <MenuItem to="/contacts" icon="phone" active={pathname === "/contacts"} indicate>
           Контакты
         </MenuItem>
       </div>
