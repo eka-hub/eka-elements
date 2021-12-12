@@ -3,6 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 import css from "./Button.module.scss";
 import { Icon } from "..";
+import ButtonWrapper from "./ButtonWrapper";
 
 const Button = ({
   className = "",
@@ -11,10 +12,12 @@ const Button = ({
   iconRight = false,
   iconSpin = false,
   type = "default",
+  to = "",
+  newTab = false,
   ...rest
 }) => {
   return (
-    <button
+    <ButtonWrapper
       className={cn(
         className,
         css["button"],
@@ -23,16 +26,19 @@ const Button = ({
         icon && css["with-icon"],
         iconRight && css["icon-right"]
       )}
+      to={to}
+      newTab={newTab}
       {...rest}
     >
       {!iconRight && <Icon icon={icon} spin={iconSpin} />}
       {children}
       {iconRight && <Icon icon={icon} spin={iconSpin} />}
-    </button>
+    </ButtonWrapper>
   );
 };
 
 Button.propTypes = {
+  to: PropTypes.string,
   className: PropTypes.string,
   icon: PropTypes.string,
   iconRight: PropTypes.bool,

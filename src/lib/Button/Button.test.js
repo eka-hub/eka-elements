@@ -3,6 +3,7 @@ import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import userEvent from "@testing-library/user-event";
 import Button from "./Button";
+import { MemoryRouter } from "react-router-dom";
 
 const content = "text";
 
@@ -38,9 +39,21 @@ describe("Button test", () => {
         {content}
       </Button>
     );
-
     expect(onClick).not.toHaveBeenCalled();
     userEvent.click(getByTestId("button"));
     expect(onClick).toHaveBeenCalled();
+  });
+
+  test("Should be a link", () => {
+    const link = "/link";
+    const { container } = render(
+      <MemoryRouter>
+        <Button to={link} newTab>{content}</Button>
+      </MemoryRouter>
+    );
+    const button = container.querySelector("a");
+    expect(button).toBeInTheDocument();
+    expect(button.getAttribute("href")).toBe(link);
+    expect(button.getAttribute("target")).toBe("_blank");
   });
 });

@@ -1,5 +1,4 @@
-import { Button } from "../lib";
-import { useDarkMode } from "./_hooks";
+import { Button, useDarkMode } from "../lib";
 
 const Div = ({ ...rest }) => <div style={{ margin: "10px", display: "flex", gap: "10px" }} {...rest} />;
 
@@ -22,10 +21,10 @@ const Buttons = () => {
         </Button>
       </Div>
       <Div>
-        <Button type="secondary" icon="cross-square">
+        <Button type="secondary" to="/some-where" icon="cross-square">
           Click
         </Button>
-        <Button type="secondary" icon="shield-cross" iconRight>
+        <Button to="/home" newTab type="secondary" icon="shield-cross" iconRight>
           Click
         </Button>
         <Button type="secondary">Click</Button>

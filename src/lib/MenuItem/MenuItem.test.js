@@ -1,23 +1,11 @@
 import React from "react";
-import { act, render, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import userEvent from "@testing-library/user-event";
 import MenuItem from "./MenuItem";
 
-import { MemoryRouter, Route, Router } from "react-router-dom";
-import { createMemoryHistory } from "history";
+import { MemoryRouter } from "react-router-dom";
 
 const content = "text";
-
-function _renders(active = false) {
-  return (
-    <MemoryRouter>
-      <MenuItem to="/calendar" icon="calendar" active={active}>
-        {content}
-      </MenuItem>
-    </MemoryRouter>
-  );
-}
 
 describe("MenuItem test", () => {
   test("Should have an icon", () => {
