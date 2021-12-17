@@ -1,28 +1,24 @@
 import { useEffect, useState } from "react";
 
+const darkAttr = "dark-mode";
+
 const useDarkMode = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    const observer = new MutationObserver(function (mutations) {
-      mutations.forEach(function (mutation) {
-        if (mutation.type === "attributes") {
-          setIsDarkMode(document.body.hasAttribute("dark-mode"));
-        }
-      });
-    });
-
-    observer.observe(document.body, {
-      attributes: true,
-    });
+    setIsDarkMode(document.body.hasAttribute("dark-mode"));
   }, []);
 
+  useEffect(() => {
+    document.body[isDarkMode ? "setAttribute" : "removeAttribute"](darkAttr, "");
+  }, [isDarkMode]);
+
   const toggleMode = () => {
-    document.body.toggleAttribute("dark-mode");
+    setIsDarkMode((prev) => !prev);
   };
 
   const setMode = (mode) => {
-    document.body[mode === "dark" ? "setAttribute" : "removeAttribute"]("dark-mode", "");
+    setIsDarkMode(mode === "dark");
   };
 
   return { dark: isDarkMode, toggleMode, setMode };
