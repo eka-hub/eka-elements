@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { act, render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import userEvent from "@testing-library/user-event";
 import Icon from "./Icon";
@@ -40,7 +40,9 @@ describe("Icon test", () => {
     const { getByTestId } = render(<Icon icon="alarm" data-testid="icon" onClick={onClick} />);
 
     expect(onClick).not.toHaveBeenCalled();
-    userEvent.click(getByTestId("icon"));
+    act(() => {
+      userEvent.click(getByTestId("icon"));
+    });
     expect(onClick).toHaveBeenCalled();
   });
 });

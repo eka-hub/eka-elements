@@ -1,0 +1,69 @@
+@import "../constants.scss";
+
+.toggle {
+  width: 38px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: $light-03;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  input {
+    cursor: inherit;
+    position: absolute;
+    opacity: 0;
+  }
+
+  span {
+    transition: all 0.25s;
+    width: 14px;
+    height: 14px;
+    background-color: $grey-03;
+    border-radius: 100px;
+    margin-left: -16px;
+    animation: to-disactive 0.25s 0s normal;
+
+    @include dark-mode {
+      background: $dark-02;
+    }
+  }
+
+  &.active span {
+    animation: to-active 0.25s 0s normal;
+    background-color: $accent-01 !important;
+    margin-left: 16px;
+  }
+
+  @include dark-mode {
+    background: $grey-02;
+  }
+}
+
+@keyframes to-active {
+  from {
+    width: 76%;
+    margin-left: -2px;
+  }
+  to {
+    width: 14px;
+    margin-left: 16px;
+  }
+}
+
+@keyframes to-disactive {
+  from {
+    width: 76%;
+    margin-left: 2px;
+  }
+  to {
+    width: 14px;
+    margin-left: -16px;
+  }
+}

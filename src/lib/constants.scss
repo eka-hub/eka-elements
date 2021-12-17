@@ -31,12 +31,15 @@ $box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 // mixins
+
+// set color for svg
 @mixin icon-color($color) {
   svg path {
     stroke: $color;
   }
 }
 
+// styles for dark mode
 @mixin dark-mode() {
   @media (prefers-color-scheme: dark) {
     @at-root #{selector-nest('body:not([dark-mode]):not([dark-mode])', &)} {

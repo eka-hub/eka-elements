@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { act, render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import userEvent from "@testing-library/user-event";
 import Button from "./Button";
@@ -40,7 +40,9 @@ describe("Button test", () => {
       </Button>
     );
     expect(onClick).not.toHaveBeenCalled();
-    userEvent.click(getByTestId("button"));
+    act(() => {
+      userEvent.click(getByTestId("button"));
+    });
     expect(onClick).toHaveBeenCalled();
   });
 
@@ -48,7 +50,9 @@ describe("Button test", () => {
     const link = "/link";
     const { container } = render(
       <MemoryRouter>
-        <Button to={link} newTab>{content}</Button>
+        <Button to={link} newTab>
+          {content}
+        </Button>
       </MemoryRouter>
     );
     const button = container.querySelector("a");

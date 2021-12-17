@@ -6,7 +6,7 @@ const useDarkMode = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    setIsDarkMode(document.body.hasAttribute("dark-mode"));
+    setIsDarkMode(document.body.hasAttribute(darkAttr));
   }, []);
 
   useEffect(() => {
