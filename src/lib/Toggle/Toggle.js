@@ -7,7 +7,7 @@ const Toggle = ({ className = "", active = false, disabled = false, onChange = n
   const [isActive, setIsActive] = useState(active);
   useEffect(() => {
     if (typeof onChange === "function") onChange(isActive);
-  }, [isActive]);
+  }, [onChange, isActive]);
 
   return (
     <label className={cn(className, css["toggle"], css[isActive ? "active" : ""], css[disabled ? "disabled" : ""])}>

@@ -25,11 +25,11 @@ describe("Toggle test", () => {
 
   test("Should change state and return onChange callback", () => {
     const isOnChange = jest.fn();
-    const { container, getByTestId } = render(<Toggle data-testid="button" onChange={isOnChange} />);
+    const { container, getByTestId } = render(<Toggle data-testid="toggle" onChange={isOnChange} />);
     const toggle = container.querySelector("input");
     expect(toggle.checked).toBe(false);
     act(() => {
-      userEvent.click(getByTestId("button"));
+      userEvent.click(getByTestId("toggle"));
     });
     expect(toggle.checked).toBe(true);
     expect(isOnChange).toBeCalled();
