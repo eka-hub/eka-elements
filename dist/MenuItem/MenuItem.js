@@ -13,11 +13,13 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _cssModule = _interopRequireDefault(require("./css.module.scss"));
+var _MenuItemModule = _interopRequireDefault(require("./MenuItem.module.scss"));
 
-var _reactSvg = require("react-svg");
+var _ = require("..");
 
-const _excluded = ["className", "children", "icon", "iconRight", "iconSpin", "type"];
+var _reactRouterDom = require("react-router-dom");
+
+const _excluded = ["className", "to", "icon", "active", "children", "indicate"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27,34 +29,35 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-const Button = _ref => {
+const MenuItem = _ref => {
   let {
-    className,
-    children,
-    icon = null,
-    iconRight = false,
-    iconSpin = false,
-    type = "default"
+    className = "",
+    to = "",
+    icon = "",
+    active = false,
+    children = "",
+    indicate = false
   } = _ref,
-      props = _objectWithoutProperties(_ref, _excluded);
+      rest = _objectWithoutProperties(_ref, _excluded);
 
-  const iconElement = icon && /*#__PURE__*/_react.default.createElement(_reactSvg.ReactSVG, {
-    src: require("../icons/".concat(icon, ".svg")).default,
-    wrapper: "span"
-  });
-
-  return /*#__PURE__*/_react.default.createElement("button", _extends({
-    className: (0, _classnames.default)(className, _cssModule.default["button"], _cssModule.default[type], !children && _cssModule.default["square"], icon && _cssModule.default["with-icon"], iconRight && _cssModule.default["icon-right"], iconSpin && _cssModule.default["icon-spin"])
-  }, props), !iconRight && iconElement, children, iconRight && iconElement);
+  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, _extends({
+    to: to,
+    className: (0, _classnames.default)(className, _MenuItemModule.default["menu-item"], active && _MenuItemModule.default["active"])
+  }, rest), icon && /*#__PURE__*/_react.default.createElement(_.Icon, {
+    icon: icon
+  }), children, indicate && /*#__PURE__*/_react.default.createElement(_.Dot, {
+    className: _MenuItemModule.default["indicator"],
+    state: "active"
+  }));
 };
 
-Button.propTypes = {
+MenuItem.propTypes = {
   className: _propTypes.default.string,
-  type: _propTypes.default.oneOf(["default", "border", "secondary", "empty"]),
-  icon: _propTypes.default.string,
-  iconRight: _propTypes.default.bool,
-  iconSpin: _propTypes.default.bool,
-  children: _propTypes.default.string || _propTypes.default.any
+  to: _propTypes.default.string,
+  icon: _propTypes.default.string.isRequired,
+  active: _propTypes.default.bool,
+  children: _propTypes.default.string.isRequired,
+  rest: _propTypes.default.any
 };
-var _default = Button;
+var _default = MenuItem;
 exports.default = _default;

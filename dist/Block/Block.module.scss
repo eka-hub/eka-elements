@@ -1,0 +1,12 @@
+@import "../constants.scss";
+
+.block {
+  background: $white;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  padding: 8px 16px;
+  @include dark-mode {
+    background: $dark-02;
+    color: $light-02;
+  }
+}

@@ -1,0 +1,74 @@
+@import "../constants.scss";
+
+.menu-item {
+  border: 1px solid transparent;
+  appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  margin: 2px 0px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.15s;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 9px 11px;
+  box-sizing: border-box;
+  outline-color: $accent-01;
+
+  @include dark-mode {
+    color: $light-03;
+    @include icon-color($light-03);
+  }
+
+  // icon styles
+  > span {
+    height: 22px;
+    width: 22px;
+    margin-right: 8px;
+    svg {
+      height: 22px;
+      width: 22px;
+    }
+  }
+
+  .indicator {
+    display: inline-flex;
+    align-self: center;
+    margin-left: auto;
+  }
+
+  // states
+  &:hover:not(:disabled, &.active) {
+    cursor: pointer;
+    background-color: $light-02;
+    @include dark-mode {
+      background: $dark-01;
+      color: $light-03;
+      @include icon-color($light-03);
+    }
+  }
+  &:active {
+    opacity: 0.5 !important;
+    box-shadow: none;
+  }
+  &:disabled {
+    cursor: not-allowed !important;
+    opacity: 0.35 !important;
+  }
+
+  // styles
+  &.active {
+    background-color: $dark-01;
+    color: $light-03;
+    @include icon-color($light-03);
+
+    @include dark-mode {
+      background: $light-01;
+      color: $dark-01;
+      @include icon-color($dark-01);
+    }
+  }
+}

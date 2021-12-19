@@ -4,22 +4,50 @@
 $light-01: #f3f3f3;
 $light-02: #edf2f3;
 $light-03: #e3e9e9;
-$grey-01: #646c7e;
+$grey-01: #333333;
 $grey-02: #555555;
 $grey-03: #737e8d;
 $dark-01: #151515;
 $dark-02: #242323;
 $accent-01: #0097a1;
 $accent-02: #003c40;
-$red: #eb5757;
+$red: #ce463d;
 $orange: #f2994a;
 $yellow: #f2c94c;
+$white: #ffffff;
 
 // measures
 $border-radius: 13px;
+$box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 
 // default styles
 * {
   font-family: "Nunito", sans-serif;
   color: $dark-01;
+  letter-spacing: -0.01em;
+}
+
+[dark-mode] {
+  background-color: $grey-01;
+}
+
+// mixins
+
+// set color for svg
+@mixin icon-color($color) {
+  svg path {
+    stroke: $color;
+  }
+}
+
+// styles for dark mode
+@mixin dark-mode() {
+  @media (prefers-color-scheme: dark) {
+    @at-root #{selector-nest('body:not([dark-mode]):not([dark-mode])', &)} {
+      @content;
+    }
+  }
+  @at-root #{selector-nest('body[dark-mode]', &)} {
+    @content;
+  }
 }
