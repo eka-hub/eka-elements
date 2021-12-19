@@ -11,7 +11,7 @@ $dark-01: #151515;
 $dark-02: #242323;
 $accent-01: #0097a1;
 $accent-02: #003c40;
-$red: #eb5757;
+$red: #ce463d;
 $orange: #f2994a;
 $yellow: #f2c94c;
 $white: #ffffff;
@@ -24,6 +24,7 @@ $box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 * {
   font-family: "Nunito", sans-serif;
   color: $dark-01;
+  letter-spacing: -0.01em;
 }
 
 [dark-mode] {

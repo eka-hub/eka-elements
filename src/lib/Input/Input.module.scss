@@ -1,0 +1,93 @@
+@import "../constants.scss";
+
+.input-wrapper {
+  width: 208px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    margin-bottom: 4px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    @include dark-mode {
+      color: $light-03;
+    }
+  }
+
+  .input {
+    border: 1px solid transparent;
+    appearance: none;
+    transition: all 0.15s;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: $light-03;
+    border: 1px solid transparent;
+    padding: 7px 14px;
+    outline-color: $accent-01;
+    text-decoration: none;
+    width: 100%;
+
+    input {
+      appearance: none;
+      border: 0px;
+      background: transparent;
+      outline: none;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    &:focus-within {
+      background-color: $light-01;
+      border-color: $light-03;
+    }
+
+    @include dark-mode {
+      background: $grey-01;
+      input {
+        color: $light-03;
+      }
+
+      &:focus-within {
+        background-color: $dark-02;
+        border-color: $grey-03;
+      }
+    }
+
+    // icon styles
+    &.with-icon {
+      > span {
+        height: 22px;
+        width: 22px;
+        margin-right: 8px;
+        svg {
+          height: 22px;
+          width: 22px;
+        }
+      }
+    }
+    &.icon-right {
+      > span {
+        margin-left: 8px;
+        margin-right: 0px;
+      }
+    }
+
+    // states
+    &.disabled {
+      cursor: not-allowed !important;
+      opacity: 0.35 !important;
+      * {
+        cursor: not-allowed !important;
+      }
+    }
+
+    &.warning {
+      border-color: $red !important;
+      @include icon-color($red);
+    }
+  }
+}

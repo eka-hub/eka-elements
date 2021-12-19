@@ -38,12 +38,13 @@ const Button = ({
 };
 
 Button.propTypes = {
-  to: PropTypes.string,
   className: PropTypes.string,
   icon: PropTypes.string,
   iconRight: PropTypes.bool,
   iconSpin: PropTypes.bool,
   type: PropTypes.oneOf(["default", "border", "secondary", "empty"]),
+  to: PropTypes.string,
+  newTab: PropTypes.bool,
   children: PropTypes.string,
   rest: PropTypes.any,
 };

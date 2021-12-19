@@ -4,13 +4,16 @@ import Dots from "./Dots";
 import MenuItems from "./MenuItems";
 import RadioToggle from "./RadioToggle";
 import Avatars from "./Avatars";
+import Inputs from "./Inputs";
 
 function Example() {
   return (
     <>
-      <Avatars />
-      <hr />
       <RadioToggle />
+      <hr />
+      <Inputs />
+      <hr />
+      <Avatars />
       <hr />
       <Buttons />
       <hr />

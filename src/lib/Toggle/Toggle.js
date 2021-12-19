@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 import css from "./Toggle.module.scss";
 
 const Toggle = ({ className = "", active = false, disabled = false, onChange = null, ...rest }) => {
   const [isActive, setIsActive] = useState(active);
-  useEffect(() => {
-    if (typeof onChange === "function") onChange(isActive);
-  }, [onChange, isActive]);
 
   return (
     <label className={cn(className, css["toggle"], css[isActive ? "active" : ""], css[disabled ? "disabled" : ""])}>
@@ -15,6 +12,7 @@ const Toggle = ({ className = "", active = false, disabled = false, onChange = n
         type="checkbox"
         defaultChecked={isActive}
         onChange={(e) => {
+          onChange?.(e);
           setIsActive(e.target.checked);
         }}
         disabled={disabled}

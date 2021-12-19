@@ -6,11 +6,11 @@ const Dots = () => {
   return (
     <Div>
       <Block>
-        <Toggle onChange={(v) => console.log(`toggle: ${v}`)} />
+        <Toggle name="e1" onChange={(e) => console.log(`toggle: ${e.target.checked}`)} />
         <br />
-        <Toggle active />
+        <Toggle name="e2" active />
         <br />
-        <Toggle onChange={(dark) => setMode(dark ? "dark" : "light")} />
+        <Toggle name="e3" onChange={(e) => setMode(e.target.checked ? "dark" : "light")} />
         <br />
         <Toggle disabled />
       </Block>
