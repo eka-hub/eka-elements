@@ -8,5 +8,8 @@
   @include dark-mode {
     background: $dark-02;
     color: $light-02;
+    * {
+      color: $light-02;
+    }
   }
 }
