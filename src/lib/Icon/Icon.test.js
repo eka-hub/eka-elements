@@ -35,6 +35,12 @@ describe("Icon test", () => {
     expect(container).toContainElement(icon);
   });
 
+  test("Should show an emoji", () => {
+    const { container } = render(<Icon icon="🥑" spin />);
+    const icon = container.querySelector("span");
+    expect(icon.textContent).toContain("🥑");
+  });
+
   test("Can be clickable", () => {
     const onClick = jest.fn();
     const { getByTestId } = render(<Icon icon="alarm" data-testid="icon" onClick={onClick} />);

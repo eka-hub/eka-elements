@@ -8,20 +8,20 @@ const Buttons = () => {
   return (
     <>
       <Div>
-        <Button icon={dark ? "sun" : "moon"} onClick={toggleMode}>
+        <Button icon={dark ? "sun-1" : "moon"} onClick={toggleMode}>
           Click
         </Button>
         <Button icon="alarm" iconRight onClick={() => setMode("dark")}>
           Click
         </Button>
         <Button onClick={() => setMode("light")}>Click</Button>
-        <Button icon="arrow-down" />
+        <Button icon="🍔" />
         <Button icon="refresh" disabled iconSpin>
           Click
         </Button>
       </Div>
       <Div>
-        <Button type="secondary" to="/some-where" icon="cross-square">
+        <Button type="secondary" to="/some-where" icon="back-square">
           Click
         </Button>
         <Button to="/home" newTab type="secondary" icon="shield-cross" iconRight>
@@ -29,7 +29,7 @@ const Buttons = () => {
         </Button>
         <Button type="secondary">Click</Button>
         <Button type="secondary" icon="heart" />
-        <Button type="secondary" icon="eye-closed" disabled>
+        <Button type="secondary" icon="bluetooth-circle" disabled>
           Click
         </Button>
       </Div>
@@ -41,8 +41,8 @@ const Buttons = () => {
           Click
         </Button>
         <Button type="empty">Click</Button>
-        <Button type="empty" icon="location-1" />
-        <Button type="empty" icon="vertical" disabled>
+        <Button type="empty" icon="location" />
+        <Button type="empty" icon="lock" disabled>
           Click
         </Button>
       </Div>
@@ -54,8 +54,8 @@ const Buttons = () => {
           Click
         </Button>
         <Button type="border">Click</Button>
-        <Button type="border" icon="save" />
-        <Button type="border" icon="screen" disabled>
+        <Button type="border" icon="printer" />
+        <Button type="border" icon="star-1" disabled>
           Click
         </Button>
       </Div>

@@ -5,11 +5,11 @@ const Blocks = () => {
     <Block>
       <Input />
       <br />
-      <Input icon="search" placeholder="Search" />
+      <Input icon="search-normal-1" placeholder="Search" />
       <br />
       <Input type="password" />
       <br />
-      <Input icon="user-info" title="Name" warning />
+      <Input icon="profile-circle" title="Name" warning />
       <br />
       <Input disabled />
     </Block>

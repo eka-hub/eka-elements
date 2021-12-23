@@ -18,7 +18,7 @@ const MenuItem = ({ className = "", to = "", icon = "", active = false, children
 MenuItem.propTypes = {
   className: PropTypes.string,
   to: PropTypes.string,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.string,
   active: PropTypes.bool,
   children: PropTypes.string.isRequired,
   rest: PropTypes.any,

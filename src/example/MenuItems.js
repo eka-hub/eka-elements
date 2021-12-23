@@ -10,15 +10,19 @@ const MenuItems = () => {
           Календарь
         </MenuItem>
         <br />
-        <MenuItem to="/home" icon="home-1" active={pathname === "/home"}>
+        <MenuItem to="/home" icon="✈️" active={pathname === "/home"}>
           Коммуналка
         </MenuItem>
         <br />
-        <MenuItem to="/shopping" icon="cart-4"  active={pathname === "/shopping"}>
+        <MenuItem to="/hobby" icon="🚵‍♀️" active={pathname === "/hobby"}>
+          Хобби
+        </MenuItem>
+        <br />
+        <MenuItem to="/shopping" icon="shopping-cart"  active={pathname === "/shopping"}>
           Покупки
         </MenuItem>
         <br />
-        <MenuItem to="/contacts" icon="phone" active={pathname === "/contacts"} indicate>
+        <MenuItem to="/contacts" icon="call" active={pathname === "/contacts"} indicate>
           Контакты
         </MenuItem>
       </div>
