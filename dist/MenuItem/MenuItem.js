@@ -54,7 +54,7 @@ const MenuItem = _ref => {
 MenuItem.propTypes = {
   className: _propTypes.default.string,
   to: _propTypes.default.string,
-  icon: _propTypes.default.string.isRequired,
+  icon: _propTypes.default.string,
   active: _propTypes.default.bool,
   children: _propTypes.default.string.isRequired,
   rest: _propTypes.default.any

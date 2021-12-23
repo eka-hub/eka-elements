@@ -58,6 +58,16 @@ describe("Icon test", () => {
     const icon = container.querySelector(".spin");
     expect(container).toContainElement(icon);
   });
+  test("Should show an emoji", () => {
+    const {
+      container
+    } = (0, _react2.render)( /*#__PURE__*/_react.default.createElement(_Icon.default, {
+      icon: "\uD83E\uDD51",
+      spin: true
+    }));
+    const icon = container.querySelector("span");
+    expect(icon.textContent).toContain("🥑");
+  });
   test("Can be clickable", () => {
     const onClick = jest.fn();
     const {
