@@ -9,7 +9,7 @@ const isEmoji = (str) => /\p{Extended_Pictographic}/gu.test(str);
 const Icon = ({ className = "", spin = false, icon = "", ...rest }) => {
   if (isEmoji(icon)) {
     return (
-      <span className={cn([className, spin && css.spin])} {...rest}>
+      <span className={cn([className, css.emoji, spin && css.spin])} {...rest}>
         {icon}
       </span>
     );

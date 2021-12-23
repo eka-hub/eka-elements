@@ -8,14 +8,14 @@ const Buttons = () => {
   return (
     <>
       <Div>
-        <Button icon={dark ? "sun-1" : "moon"} onClick={toggleMode}>
+        <Button icon={dark ? "sun-1" : "🌙"} onClick={toggleMode}>
           Click
         </Button>
         <Button icon="alarm" iconRight onClick={() => setMode("dark")}>
           Click
         </Button>
         <Button onClick={() => setMode("light")}>Click</Button>
-        <Button icon="🍔" />
+        <Button icon="🔔" />
         <Button icon="refresh" disabled iconSpin>
           Click
         </Button>
@@ -47,7 +47,7 @@ const Buttons = () => {
         </Button>
       </Div>
       <Div>
-        <Button type="border" icon="wallet">
+        <Button type="border" icon="🍔">
           Click
         </Button>
         <Button type="border" icon="alarm" iconRight>
