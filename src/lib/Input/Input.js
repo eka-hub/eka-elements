@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import css from "./Input.module.scss";
 import { Icon } from "..";
 
-const Input = ({ className = "", title = "", icon = "", disabled = false, warning = false, ...rest }) => {
+const Input = ({ className = "", title = "", icon = "", disabled = false, warning = false, hint = "", ...rest }) => {
   return (
     <label className={css["input-wrapper"]}>
       {title && <div className={css["title"]}>{title}</div>}
@@ -20,6 +20,7 @@ const Input = ({ className = "", title = "", icon = "", disabled = false, warnin
         <Icon icon={icon} />
         <input disabled={disabled} {...rest} />
       </label>
+      {hint && <span className={css.hint}>{hint}</span>}
     </label>
   );
 };
@@ -29,6 +30,8 @@ Input.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.string,
   disabled: PropTypes.bool,
+  warning: PropTypes.bool,
+  hint: PropTypes.string,
   rest: PropTypes.any,
 };
 

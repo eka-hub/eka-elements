@@ -17,7 +17,7 @@ var _InputModule = _interopRequireDefault(require("./Input.module.scss"));
 
 var _ = require("..");
 
-const _excluded = ["className", "title", "icon", "disabled", "warning"];
+const _excluded = ["className", "title", "icon", "disabled", "warning", "hint"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33,7 +33,8 @@ const Input = _ref => {
     title = "",
     icon = "",
     disabled = false,
-    warning = false
+    warning = false,
+    hint = ""
   } = _ref,
       rest = _objectWithoutProperties(_ref, _excluded);
 
@@ -47,7 +48,9 @@ const Input = _ref => {
     icon: icon
   }), /*#__PURE__*/_react.default.createElement("input", _extends({
     disabled: disabled
-  }, rest))));
+  }, rest))), hint && /*#__PURE__*/_react.default.createElement("span", {
+    className: _InputModule.default.hint
+  }, hint));
 };
 
 Input.propTypes = {
@@ -55,6 +58,8 @@ Input.propTypes = {
   title: _propTypes.default.string,
   icon: _propTypes.default.string,
   disabled: _propTypes.default.bool,
+  warning: _propTypes.default.bool,
+  hint: _propTypes.default.string,
   rest: _propTypes.default.any
 };
 var _default = Input;

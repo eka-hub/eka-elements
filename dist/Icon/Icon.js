@@ -43,7 +43,7 @@ const Icon = _ref => {
 
   if (isEmoji(icon)) {
     return /*#__PURE__*/_react.default.createElement("span", _extends({
-      className: (0, _classnames.default)([className, spin && _IconModule.default.spin])
+      className: (0, _classnames.default)([className, _IconModule.default.emoji, spin && _IconModule.default.spin])
     }, rest), icon);
   } else {
     let svg;

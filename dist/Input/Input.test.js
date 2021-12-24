@@ -59,4 +59,13 @@ describe("Input test", () => {
     });
     expect(onChange).toHaveBeenCalled();
   });
+  test("Should have a hint", () => {
+    const {
+      container
+    } = (0, _react2.render)( /*#__PURE__*/_react.default.createElement(_Input.default, {
+      "data-testid": "input",
+      hint: content
+    }));
+    expect(container.querySelector(".hint").textContent).toContain(content);
+  });
 });

@@ -14,6 +14,11 @@
       color: $light-03;
     }
   }
+  .hint {
+    color: $grey-03 !important;
+    font-size: 12px;
+    margin-top: 4px;
+  }
 
   .input {
     border: 1px solid transparent;

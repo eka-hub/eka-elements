@@ -37,4 +37,9 @@ describe("Input test", () => {
     });
     expect(onChange).toHaveBeenCalled();
   });
+
+  test("Should have a hint", () => {
+    const { container } = render(<Input data-testid="input" hint={content} />);
+    expect(container.querySelector(".hint").textContent).toContain(content);
+  });
 });

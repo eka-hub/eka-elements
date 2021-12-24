@@ -9,7 +9,7 @@ const Blocks = () => {
       <br />
       <Input type="password" />
       <br />
-      <Input icon="profile-circle" title="Name" warning />
+      <Input icon="profile-circle" title="Name" warning={Math.random() >= 0.5} hint="This is hint" />
       <br />
       <Input disabled />
     </Block>
