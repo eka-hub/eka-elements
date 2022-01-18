@@ -2,7 +2,7 @@ import { Block, Avatar } from "../lib";
 
 const Div = ({ ...rest }) => <div style={{ margin: "10px", display: "flex", gap: "10px" }} {...rest} />;
 
-const Blocks = () => {
+const Avatars = () => {
   return (
     <>
       <Div>
@@ -19,4 +19,4 @@ const Blocks = () => {
   );
 };
 
-export default Blocks;
+export default Avatars;

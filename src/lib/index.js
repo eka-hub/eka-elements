@@ -7,7 +7,8 @@ import Toggle from "./Toggle/Toggle";
 import Radio from "./Radio/Radio";
 import Avatar from "./Avatar/Avatar";
 import Input from "./Input/Input";
+import Select from "./Select/Select";
 
 import useDarkMode from "./_hooks/useDarkMode";
 
-export { Button, Block, Dot, Icon, MenuItem, Toggle, Radio, Avatar, Input, useDarkMode };
+export { Button, Block, Dot, Icon, MenuItem, Toggle, Radio, Avatar, Input, Select, useDarkMode };

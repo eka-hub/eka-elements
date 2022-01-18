@@ -1,6 +1,6 @@
 @import "../constants.scss";
 
-.input-wrapper {
+.select-wrapper {
   width: 208px;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
     margin-top: 4px;
   }
 
-  .input {
+  .select {
     border: 1px solid transparent;
     appearance: none;
     transition: all 0.15s;
@@ -33,18 +33,74 @@
     border-radius: 10px;
     background-color: $light-03;
     border: 1px solid transparent;
-    padding: 7px 14px;
     outline-color: $accent-01;
     text-decoration: none;
     width: 100%;
+    position: relative;
+    overflow: hidden;
 
-    input {
+    select {
       appearance: none;
       border: 0px;
+      text-overflow: ellipsis;
       background: transparent;
       outline: none;
       font-size: 16px;
       width: 100%;
+      z-index: 2;
+      padding: 8px 14px;
+      padding-right: 32px;
+
+      &::-ms-expand {
+        display: none;
+      }
+
+      &[multiple] {
+        height: 131px;
+        padding: 0px;
+
+        &:focus option:checked {
+          background: $accent-03 linear-gradient(0deg, $accent-03 0%, $accent-03 100%);
+        }
+
+        option {
+          padding: 8px;
+          display: flex;
+          align-items: center;
+
+          &::before {
+            content: "";
+            left: 8px;
+            top: 8px;
+            width: 22px;
+            height: 22px;
+            margin-right: 6px;
+          }
+
+          &:not(:checked):hover {
+            background: $accent-03;
+          }
+
+          &:checked {
+            background-color: $accent-01;
+            color: $light-01;
+
+            &::before {
+              background: url(./_checked.svg) no-repeat center;
+            }
+          }
+        }
+      }
+    }
+
+    &:not(.multiple)::after {
+      content: "";
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      width: 22px;
+      height: 20px;
+      background: url(./_arrow.svg) no-repeat center;
     }
 
     &:focus-within {
@@ -54,26 +110,10 @@
 
     @include dark-mode {
       background: $grey-01;
-      input {
-        color: $light-03;
-      }
 
       &:focus-within {
         background-color: $dark-02;
         border-color: $grey-03;
-      }
-    }
-
-    // icon styles
-    &.with-icon {
-      > span {
-        height: 22px;
-        width: 22px;
-        margin-right: 8px;
-        svg {
-          height: 22px;
-          width: 22px;
-        }
       }
     }
 

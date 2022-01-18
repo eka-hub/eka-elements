@@ -1,7 +1,7 @@
 import { Block, Toggle, Radio, useDarkMode } from "../lib";
 const Div = ({ ...rest }) => <div style={{ margin: "10px", display: "flex", gap: "10px" }} {...rest} />;
 
-const Dots = () => {
+const RadioToggle = () => {
   const { setMode } = useDarkMode();
   return (
     <Div>
@@ -27,4 +27,4 @@ const Dots = () => {
   );
 };
 
-export default Dots;
+export default RadioToggle;

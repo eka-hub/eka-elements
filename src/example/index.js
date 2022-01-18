@@ -5,6 +5,7 @@ import MenuItems from "./MenuItems";
 import RadioToggle from "./RadioToggle";
 import Avatars from "./Avatars";
 import Inputs from "./Inputs";
+import Selects from "./Selects";
 import { Button } from "../lib";
 
 function Example() {
@@ -12,6 +13,9 @@ function Example() {
     <>
       <Button to="/icons" icon="3square">ICONS</Button>
       <br />
+      <br />
+      <Selects />
+      <hr />
       <RadioToggle />
       <hr />
       <Inputs />

@@ -4,6 +4,7 @@
   width: 208px;
   display: flex;
   flex-direction: column;
+
   .title {
     margin-bottom: 4px;
     font-style: normal;
@@ -14,6 +15,7 @@
       color: $light-03;
     }
   }
+
   .hint {
     color: $grey-03 !important;
     font-size: 12px;
@@ -74,14 +76,7 @@
         }
       }
     }
-    &.icon-right {
-      > span {
-        margin-left: 8px;
-        margin-right: 0px;
-      }
-    }
 
-    // states
     &.disabled {
       cursor: not-allowed !important;
       opacity: 0.35 !important;

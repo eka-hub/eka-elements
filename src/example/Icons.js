@@ -293,6 +293,7 @@ const icons = [
   "document",
   "dollar-circle",
   "dollar-square",
+  "drag",
   "driver-2",
   "driver-refresh",
   "driver",
@@ -915,7 +916,7 @@ const icons = [
   "woman",
 ];
 
-const Blocks = () => {
+const Icons = () => {
   return (
     <>
       <Button type="border" to="/" icon="arrow-left">
@@ -930,4 +931,4 @@ const Blocks = () => {
   );
 };
 
-export default Blocks;
+export default Icons;

@@ -1,6 +1,6 @@
 import { Block, Input } from "../lib";
 
-const Blocks = () => {
+const Inputs = () => {
   return (
     <Block>
       <Input />
@@ -16,4 +16,4 @@ const Blocks = () => {
   );
 };
 
-export default Blocks;
+export default Inputs;

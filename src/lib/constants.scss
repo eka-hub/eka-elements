@@ -11,6 +11,7 @@ $dark-01: #151515;
 $dark-02: #242323;
 $accent-01: #0097a1;
 $accent-02: #003c40;
+$accent-03: #a1ced1;
 $red: #ce463d;
 $orange: #f2994a;
 $yellow: #f2c94c;
@@ -33,6 +34,10 @@ body {
 
 [dark-mode] {
   background-color: $grey-01;
+}
+
+::selection {
+  background: $accent-03;
 }
 
 // mixins

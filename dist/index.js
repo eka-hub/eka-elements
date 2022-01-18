@@ -51,6 +51,12 @@ Object.defineProperty(exports, "Radio", {
     return _Radio.default;
   }
 });
+Object.defineProperty(exports, "Select", {
+  enumerable: true,
+  get: function get() {
+    return _Select.default;
+  }
+});
 Object.defineProperty(exports, "Toggle", {
   enumerable: true,
   get: function get() {
@@ -81,6 +87,8 @@ var _Radio = _interopRequireDefault(require("./Radio/Radio"));
 var _Avatar = _interopRequireDefault(require("./Avatar/Avatar"));
 
 var _Input = _interopRequireDefault(require("./Input/Input"));
+
+var _Select = _interopRequireDefault(require("./Select/Select"));
 
 var _useDarkMode = _interopRequireDefault(require("./_hooks/useDarkMode"));
 
