@@ -11,7 +11,7 @@ const Button = ({
   icon = "",
   iconRight = false,
   iconSpin = false,
-  type = "default",
+  design = "default",
   to = "",
   newTab = false,
   ...rest
@@ -21,7 +21,7 @@ const Button = ({
       className={cn(
         className,
         css["button"],
-        css[type],
+        css[design],
         !children && css["square"],
         icon && css["with-icon"],
         iconRight && css["icon-right"]
@@ -42,7 +42,7 @@ Button.propTypes = {
   icon: PropTypes.string,
   iconRight: PropTypes.bool,
   iconSpin: PropTypes.bool,
-  type: PropTypes.oneOf(["default", "border", "secondary", "empty"]),
+  design: PropTypes.oneOf(["default", "border", "secondary", "empty"]),
   to: PropTypes.string,
   newTab: PropTypes.bool,
   children: PropTypes.string,

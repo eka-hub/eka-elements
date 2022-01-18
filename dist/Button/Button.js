@@ -19,7 +19,7 @@ var _ = require("..");
 
 var _ButtonWrapper = _interopRequireDefault(require("./ButtonWrapper"));
 
-const _excluded = ["className", "children", "icon", "iconRight", "iconSpin", "type", "to", "newTab"];
+const _excluded = ["className", "children", "icon", "iconRight", "iconSpin", "design", "to", "newTab"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36,14 +36,14 @@ const Button = _ref => {
     icon = "",
     iconRight = false,
     iconSpin = false,
-    type = "default",
+    design = "default",
     to = "",
     newTab = false
   } = _ref,
       rest = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/_react.default.createElement(_ButtonWrapper.default, _extends({
-    className: (0, _classnames.default)(className, _ButtonModule.default["button"], _ButtonModule.default[type], !children && _ButtonModule.default["square"], icon && _ButtonModule.default["with-icon"], iconRight && _ButtonModule.default["icon-right"]),
+    className: (0, _classnames.default)(className, _ButtonModule.default["button"], _ButtonModule.default[design], !children && _ButtonModule.default["square"], icon && _ButtonModule.default["with-icon"], iconRight && _ButtonModule.default["icon-right"]),
     to: to,
     newTab: newTab
   }, rest), !iconRight && /*#__PURE__*/_react.default.createElement(_.Icon, {
@@ -60,7 +60,7 @@ Button.propTypes = {
   icon: _propTypes.default.string,
   iconRight: _propTypes.default.bool,
   iconSpin: _propTypes.default.bool,
-  type: _propTypes.default.oneOf(["default", "border", "secondary", "empty"]),
+  design: _propTypes.default.oneOf(["default", "border", "secondary", "empty"]),
   to: _propTypes.default.string,
   newTab: _propTypes.default.bool,
   children: _propTypes.default.string,

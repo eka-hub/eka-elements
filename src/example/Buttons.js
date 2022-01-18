@@ -21,41 +21,41 @@ const Buttons = () => {
         </Button>
       </Div>
       <Div>
-        <Button type="secondary" to="/some-where" icon="back-square">
+        <Button design="secondary" to="/some-where" icon="back-square">
           Click
         </Button>
-        <Button to="/home" newTab type="secondary" icon="shield-cross" iconRight>
+        <Button to="/home" newTab design="secondary" icon="shield-cross" iconRight>
           Click
         </Button>
-        <Button type="secondary">Click</Button>
-        <Button type="secondary" icon="heart" />
-        <Button type="secondary" icon="bluetooth-circle" disabled>
-          Click
-        </Button>
-      </Div>
-      <Div>
-        <Button type="empty" icon="key">
-          Click
-        </Button>
-        <Button type="empty" icon="info-circle" iconRight>
-          Click
-        </Button>
-        <Button type="empty">Click</Button>
-        <Button type="empty" icon="location" />
-        <Button type="empty" icon="lock" disabled>
+        <Button design="secondary">Click</Button>
+        <Button design="secondary" icon="heart" />
+        <Button design="secondary" icon="bluetooth-circle" disabled>
           Click
         </Button>
       </Div>
       <Div>
-        <Button type="border" icon="🍔">
+        <Button design="empty" icon="key">
           Click
         </Button>
-        <Button type="border" icon="alarm" iconRight>
+        <Button design="empty" icon="info-circle" iconRight>
           Click
         </Button>
-        <Button type="border">Click</Button>
-        <Button type="border" icon="printer" />
-        <Button type="border" icon="star-1" disabled>
+        <Button design="empty">Click</Button>
+        <Button design="empty" icon="location" />
+        <Button design="empty" icon="lock" disabled>
+          Click
+        </Button>
+      </Div>
+      <Div>
+        <Button design="border" icon="🍔">
+          Click
+        </Button>
+        <Button design="border" icon="alarm" iconRight>
+          Click
+        </Button>
+        <Button design="border">Click</Button>
+        <Button design="border" icon="printer" />
+        <Button design="border" icon="star-1" disabled>
           Click
         </Button>
       </Div>
