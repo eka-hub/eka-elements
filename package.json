@@ -10,25 +10,27 @@
   ],
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "@testing-library/jest-dom": "^5.15.1",
-    "@testing-library/react": "^11.2.7",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
-    "@testing-library/user-event": "^12.8.3",
+    "@testing-library/user-event": "^13.5.0",
     "classnames": "^2.3.1",
-    "prop-types": "^15.7.2",
+    "postcss": "^8.4.5",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^6.0.2",
-    "react-scripts": "4.0.3",
-    "react-svg": "^14.1.3",
-    "sass": "^1.44.0"
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "react-svg": "^14.1.8",
+    "sass": "^1.49.0"
   },
   "scripts": {
     "start": "PORT=3105 react-scripts start",
     "test": "react-scripts test --coverage",
     "lib-test": "react-scripts test --no-cache --watch --coverage --collectCoverageFrom=src/lib/**/*js",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
-    "audit-fix": "npx npm-force-resolutions && npm i"
+    "audit-fix": "npx npm-force-resolutions && npm i",
+    "update-all": "npx npm-check-updates -u && npm i"
   },
   "eslintConfig": {
     "extends": [
@@ -49,9 +51,9 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.4"
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.10",
+    "@babel/preset-env": "^7.16.10"
   },
   "jest": {
     "moduleNameMapper": {
@@ -59,10 +61,11 @@
     }
   },
   "resolutions": {
-    "ansi-html": "^0.0.7",
+    "ansi-html": "git://github.com:mahdyar/ansi-html-community#v0.0.8",
     "ansi-regex": "^5.0.1",
     "immer": "^9.0.6",
     "glob-parent": "^5.1.2",
-    "nth-check": "^2.0.1"
+    "nth-check": "^2.0.1",
+    "postcss": "^8.2.13"
   }
 }

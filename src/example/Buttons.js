@@ -9,7 +9,7 @@ const Buttons = () => {
     <>
       <Div>
         <Button icon={dark ? "sun-1" : "🌙"} onClick={toggleMode}>
-          Click
+          {dark ? 'sun' : 'moon'}
         </Button>
         <Button icon="alarm" iconRight onClick={() => setMode("dark")}>
           Click
