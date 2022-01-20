@@ -12,20 +12,9 @@ const Icon = ({ className = "", spin = false, icon = null, ...rest }) => {
   useEffect(() => {
     if (!isEmoji(icon)) {
       try {
-        const iconPath = require(`../_icons/${icon}.svg`).default;
-        if (iconPath) {
-          setSvg(iconPath);
-        } else {
-          throw new Error("require() function doesn't work as expected.");
-        }
+        setSvg(require(`../_icons/${icon}.svg`).default);
       } catch {
-        import(`../_icons/${icon}.svg`)
-          .then((path) => {
-            setSvg(path.default);
-          })
-          .catch(() => {
-            setSvg(null);
-          });
+        setSvg(null);
       }
     }
   }, [icon]);

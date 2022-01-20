@@ -1,6 +1,6 @@
 {
   "name": "eka-elements",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "private": true,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -59,7 +59,6 @@
     }
   },
   "resolutions": {
-    "ansi-html": "git://github.com:mahdyar/ansi-html-community#v0.0.8",
     "ansi-regex": "^5.0.1",
     "immer": "^9.0.6",
     "glob-parent": "^5.1.2",
