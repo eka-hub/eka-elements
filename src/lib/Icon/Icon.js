@@ -6,7 +6,7 @@ import css from "./Icon.module.scss";
 
 const isEmoji = (str) => /\p{Extended_Pictographic}/gu.test(str);
 
-const Icon = ({ className = "", spin = false, icon = "", ...rest }) => {
+const Icon = ({ className = "", spin = false, icon = null, ...rest }) => {
   if (isEmoji(icon)) {
     return (
       <span className={cn([className, css.emoji, spin && css.spin])} {...rest}>

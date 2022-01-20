@@ -3,7 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 import css from "./Avatar.module.scss";
 
-const Avatar = ({ className = "", src = "", size = 60, ...rest }) => {
+const Avatar = ({ className = "", src = null, size = 60, ...rest }) => {
   return (
     src && (
       <div

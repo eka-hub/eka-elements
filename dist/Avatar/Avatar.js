@@ -28,7 +28,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 const Avatar = _ref => {
   let {
     className = "",
-    src = "",
+    src = null,
     size = 60
   } = _ref,
       rest = _objectWithoutProperties(_ref, _excluded);

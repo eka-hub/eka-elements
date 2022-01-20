@@ -37,7 +37,7 @@ const Icon = _ref => {
   let {
     className = "",
     spin = false,
-    icon = ""
+    icon = null
   } = _ref,
       rest = _objectWithoutProperties(_ref, _excluded);
 
