@@ -57,6 +57,18 @@ Object.defineProperty(exports, "Select", {
     return _Select.default;
   }
 });
+Object.defineProperty(exports, "Tab", {
+  enumerable: true,
+  get: function get() {
+    return _Tabs.Tab;
+  }
+});
+Object.defineProperty(exports, "Tabs", {
+  enumerable: true,
+  get: function get() {
+    return _Tabs.Tabs;
+  }
+});
 Object.defineProperty(exports, "Toggle", {
   enumerable: true,
   get: function get() {
@@ -89,6 +101,8 @@ var _Avatar = _interopRequireDefault(require("./Avatar/Avatar"));
 var _Input = _interopRequireDefault(require("./Input/Input"));
 
 var _Select = _interopRequireDefault(require("./Select/Select"));
+
+var _Tabs = require("./Tabs/Tabs");
 
 var _useDarkMode = _interopRequireDefault(require("./_hooks/useDarkMode"));
 

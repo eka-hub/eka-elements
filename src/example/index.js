@@ -6,6 +6,7 @@ import RadioToggle from "./RadioToggle";
 import Avatars from "./Avatars";
 import Inputs from "./Inputs";
 import Selects from "./Selects";
+import Tabs from "./Tabs";
 import { Button } from "../lib";
 
 function Example() {
@@ -14,6 +15,8 @@ function Example() {
       <Button to="/icons" icon="3square">ICONS</Button>
       <br />
       <br />
+      <Tabs />
+      <hr />
       <Selects />
       <hr />
       <RadioToggle />

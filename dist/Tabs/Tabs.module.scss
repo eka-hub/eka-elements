@@ -1,0 +1,60 @@
+@import "../constants.scss";
+
+.tabs {
+  width: 100%;
+  .tabs-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: -$border-radius;
+    overflow: auto;
+  }
+  .tab {
+    flex: none;
+    border-radius: $border-radius $border-radius 0px 0px;
+    background: transparent;
+    padding-bottom: calc($border-radius + 4px);
+    box-shadow: none;
+    position: relative;
+    color: $grey-03;
+    @include dark-mode {
+      background: transparent;
+      opacity: 0.6;
+    }
+    &.active {
+      background-color: #ffffff;
+      color: $dark-01;
+      opacity: 1 !important;
+      z-index: 1;
+      @include dark-mode {
+        background: $dark-02;
+        color: $light-03;
+      }
+    }
+
+    &:not(.active)::before {
+      content: "";
+      border-left: 1px solid $grey-03;
+      opacity: 0.25;
+      height: 16px;
+      top: 10px;
+      width: 1px;
+      position: absolute;
+      left: -1px;
+      z-index: -1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:first-child,
+    &.active + * {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  .content {
+    padding-top: calc($border-radius - 4px);
+  }
+}
