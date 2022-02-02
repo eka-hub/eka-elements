@@ -24,8 +24,11 @@ const useTabs = (children, hashActive = false, rowRef) => {
 
   useEffect(() => {
     if (Array.isArray(children)) {
-      children.forEach((tab, id) => saveTab(tab, id));
+      // several Tabs
+      const internal = children.flat();
+      internal.forEach((tab, id) => saveTab(tab, id));
     } else {
+      // one Tab
       saveTab(children);
     }
     // eslint-disable-next-line

@@ -9,6 +9,10 @@ require("core-js/modules/web.dom-collections.iterator.js");
 
 require("core-js/modules/web.immediate.js");
 
+require("core-js/modules/es.array.flat.js");
+
+require("core-js/modules/es.array.unscopables.flat.js");
+
 var _react = require("react");
 
 const _excluded = ["active", "children"];
@@ -49,8 +53,11 @@ const useTabs = function useTabs(children) {
   }, [tabs, hashActive, rowRef]);
   (0, _react.useEffect)(() => {
     if (Array.isArray(children)) {
-      children.forEach((tab, id) => saveTab(tab, id));
+      // several Tabs
+      const internal = children.flat();
+      internal.forEach((tab, id) => saveTab(tab, id));
     } else {
+      // one Tab
       saveTab(children);
     } // eslint-disable-next-line
 

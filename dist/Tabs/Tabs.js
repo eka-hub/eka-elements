@@ -2,6 +2,8 @@
 
 require("core-js/modules/es.object.assign.js");
 
+require("core-js/modules/web.dom-collections.iterator.js");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -11,7 +13,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _react = require("react");
+var _react = _interopRequireWildcard(require("react"));
 
 var _ = require("..");
 
@@ -20,6 +22,10 @@ var _TabsModule = _interopRequireDefault(require("./Tabs.module.scss"));
 var _useTabs = _interopRequireDefault(require("./useTabs"));
 
 const _excluded = ["id", "title", "onClick", "content"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42,9 +48,9 @@ const Tabs = _ref => {
     active,
     setActive
   } = (0, _useTabs.default)(children, hashActive, rowRef);
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: _TabsModule.default.tabs
-  }, tabs.length > 0 ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+  }, tabs.length > 0 ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: _TabsModule.default["tabs-row"],
     ref: rowRef
   }, tabs.map(_ref2 => {
@@ -58,7 +64,7 @@ const Tabs = _ref => {
     } = _ref2,
         rest = _objectWithoutProperties(_ref2, _excluded);
 
-    return /*#__PURE__*/React.createElement(_.Button, _extends({
+    return /*#__PURE__*/_react.default.createElement(_.Button, _extends({
       key: id,
       className: (0, _classnames.default)(_TabsModule.default.tab, active === id ? _TabsModule.default.active : ""),
       design: active === id ? "default" : "secondary",
@@ -74,7 +80,7 @@ const Tabs = _ref => {
         }
       }
     }, rest), title);
-  })), /*#__PURE__*/React.createElement(_.Block, {
+  })), /*#__PURE__*/_react.default.createElement(_.Block, {
     className: _TabsModule.default.content
   }, (_tabs$find = tabs.find(tab => tab.id === active)) === null || _tabs$find === void 0 ? void 0 : _tabs$find.content)) : null);
 };
@@ -93,6 +99,6 @@ Tabs.propTypes = {
  * @prop ...rest - other props of the <Button /> component, such as 'icon', 'onClick', etc.
  */
 
-const Tab = () => /*#__PURE__*/React.createElement("div", null);
+const Tab = () => /*#__PURE__*/_react.default.createElement("div", null);
 
 exports.Tab = Tab;

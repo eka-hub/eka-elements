@@ -1,6 +1,6 @@
 import cn from "classnames";
 import PropTypes from "prop-types";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { Block, Button } from "..";
 import css from "./Tabs.module.scss";
 import useTabs from "./useTabs";

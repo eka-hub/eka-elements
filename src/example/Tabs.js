@@ -2,13 +2,22 @@ import { Tab, Tabs, Icon } from "../lib";
 
 const Div = ({ ...rest }) => <div style={{ margin: "10px", display: "flex", gap: "10px" }} {...rest} />;
 
+const tabs = [
+  { id: 1, name: "Title 1" },
+  { id: 2, name: "Title 2" },
+  { id: 3, name: "Title 3" },
+];
+
 const TabsBlock = () => {
   return (
     <>
       <Div>
         <Tabs hashActive>
-          <Tab title="Title 1">tab 1 content</Tab>
-          <Tab title="Title 3">tab 124 content</Tab>
+          {tabs.map((home) => (
+            <Tab key={home.id} title={home.name}>
+              1 табы
+            </Tab>
+          ))}
           <Tab title="Title 4">tab 11 content</Tab>
           <Tab title="Title 5">tab 12 content</Tab>
           <Tab title="Title 6">tab 15 content</Tab>

@@ -2,6 +2,7 @@
 
 .tabs {
   width: 100%;
+  display: grid;
   .tabs-row {
     display: flex;
     align-items: center;
@@ -12,7 +13,7 @@
     flex: none;
     border-radius: $border-radius $border-radius 0px 0px;
     background: transparent;
-    padding-bottom: calc($border-radius + 4px);
+    padding-bottom: calc($border-radius + 6px);
     box-shadow: none;
     position: relative;
     color: $grey-03;
