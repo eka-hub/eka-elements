@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Block, Button } from "..";
 import css from "./Tabs.module.scss";
 
-export const Tabs = ({ tabs = [], activeId = 0, hashActive = false }) => {
+const Tabs = ({ tabs = [], activeId = 0, hashActive = false }) => {
   const rowRef = useRef();
   const [activeTab, setActiveTab] = useState(null);
 
@@ -72,7 +72,7 @@ Tabs.propTypes = {
  * @prop hashActive (bool): For saving current tab;
  * @prop ...rest - other props of the <Button /> component, such as 'icon', 'onClick', etc.
  */
-export const Tab = ({ activeTab, setActiveTab, id, title, onClick, hashActive, ...rest }) => {
+const Tab = ({ activeTab, setActiveTab, id, title, onClick, hashActive, ...rest }) => {
   const thisIsActive = String(activeTab) === String(id);
   return (
     <Button
@@ -103,3 +103,5 @@ Tab.propTypes = {
   onClick: PropTypes.func,
   hashActive: PropTypes.bool,
 };
+
+export default Tabs;

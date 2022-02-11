@@ -8,8 +8,8 @@ import Radio from "./Radio/Radio";
 import Avatar from "./Avatar/Avatar";
 import Input from "./Input/Input";
 import Select from "./Select/Select";
-import { Tabs, Tab } from "./Tabs/Tabs";
+import Tabs from "./Tabs/Tabs";
 
 import useDarkMode from "./_hooks/useDarkMode";
 
-export { Button, Block, Dot, Icon, MenuItem, Toggle, Radio, Avatar, Input, Select, Tabs, Tab, useDarkMode };
+export { Button, Block, Dot, Icon, MenuItem, Toggle, Radio, Avatar, Input, Select, Tabs, useDarkMode };
