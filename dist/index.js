@@ -63,10 +63,22 @@ Object.defineProperty(exports, "Tab", {
     return _Tabs.Tab;
   }
 });
+Object.defineProperty(exports, "TabContent", {
+  enumerable: true,
+  get: function get() {
+    return _Tabs.TabContent;
+  }
+});
 Object.defineProperty(exports, "Tabs", {
   enumerable: true,
   get: function get() {
     return _Tabs.Tabs;
+  }
+});
+Object.defineProperty(exports, "TabsRow", {
+  enumerable: true,
+  get: function get() {
+    return _Tabs.TabsRow;
   }
 });
 Object.defineProperty(exports, "Toggle", {
