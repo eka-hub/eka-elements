@@ -19,7 +19,7 @@ var _ = require("..");
 
 var _reactRouterDom = require("react-router-dom");
 
-const _excluded = ["className", "to", "icon", "active", "children", "indicate"];
+const _excluded = ["className", "to", "icon", "active", "subactive", "children", "indicate"];
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35,6 +35,7 @@ const MenuItem = _ref => {
     to = "",
     icon = "",
     active = false,
+    subactive = false,
     children = "",
     indicate = false
   } = _ref,
@@ -42,7 +43,7 @@ const MenuItem = _ref => {
 
   return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, _extends({
     to: to,
-    className: (0, _classnames.default)(className, _MenuItemModule.default["menu-item"], active && _MenuItemModule.default["active"])
+    className: (0, _classnames.default)(className, _MenuItemModule.default["menu-item"], active && _MenuItemModule.default["active"], subactive && _MenuItemModule.default["sub-active"])
   }, rest), icon && /*#__PURE__*/_react.default.createElement(_.Icon, {
     icon: icon
   }), children, indicate && /*#__PURE__*/_react.default.createElement(_.Dot, {

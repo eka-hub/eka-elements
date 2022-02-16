@@ -25,6 +25,10 @@ const MenuItems = () => {
         <MenuItem to="/contacts" icon="call" active={pathname === "/contacts"} indicate>
           Контакты
         </MenuItem>
+        <br />
+        <MenuItem onClick={() => alert("Hello?")} icon="edit-2">
+          Just for click
+        </MenuItem>
       </div>
     </>
   );

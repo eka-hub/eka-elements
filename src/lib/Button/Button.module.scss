@@ -67,6 +67,14 @@
       @include icon-color($light-01);
     }
   }
+  &.danger {
+    background: $red-light;
+    @include dark-mode {
+      background: $red;
+      color: $light-01;
+      @include icon-color($light-01);
+    }
+  }
   &.empty {
     background: transparent;
     @include dark-mode {

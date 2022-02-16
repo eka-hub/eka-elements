@@ -63,5 +63,16 @@ describe("MenuItem test", () => {
     const item = container.querySelector("a.menu-item");
     expect(item).toHaveClass("menu-item active");
   });
+  test("Should be a subactive", () => {
+    const {
+      container
+    } = (0, _react2.render)( /*#__PURE__*/_react.default.createElement(_reactRouterDom.MemoryRouter, null, /*#__PURE__*/_react.default.createElement(_MenuItem.default, {
+      to: "/calendar",
+      icon: "calendar",
+      subactive: true
+    }, content)));
+    const item = container.querySelector("a.menu-item");
+    expect(item).toHaveClass("menu-item sub-active");
+  });
   test.todo("Should change location");
 });

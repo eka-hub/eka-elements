@@ -1,9 +1,14 @@
+import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 import { Block, Button } from "..";
 import css from "./Tabs.module.scss";
 
-const Tabs = ({ className, ...rest }) => <div className={cn(css.tabs, className)} {...rest} />;
+const Tabs = ({ className, ...rest }) => (
+  <div className={cn(css["tabs-wrapper"], className)}>
+    <div className={css.tabs} {...rest} />
+  </div>
+);
 
 Tabs.propTypes = {
   className: PropTypes.string,

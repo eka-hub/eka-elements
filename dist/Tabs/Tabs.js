@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.TabsRow = exports.Tabs = exports.TabContent = exports.Tab = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -34,9 +36,11 @@ const Tabs = _ref => {
   } = _ref,
       rest = _objectWithoutProperties(_ref, _excluded);
 
-  return /*#__PURE__*/React.createElement("div", _extends({
-    className: (0, _classnames.default)(_TabsModule.default.tabs, className)
-  }, rest));
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: (0, _classnames.default)(_TabsModule.default["tabs-wrapper"], className)
+  }, /*#__PURE__*/_react.default.createElement("div", _extends({
+    className: _TabsModule.default.tabs
+  }, rest)));
 };
 
 exports.Tabs = Tabs;
@@ -51,7 +55,7 @@ const TabsRow = _ref2 => {
   } = _ref2,
       rest = _objectWithoutProperties(_ref2, _excluded2);
 
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/_react.default.createElement("div", _extends({
     className: (0, _classnames.default)(_TabsModule.default["tabs-row"], className)
   }, rest));
 };
@@ -68,7 +72,7 @@ const TabContent = _ref3 => {
   } = _ref3,
       rest = _objectWithoutProperties(_ref3, _excluded3);
 
-  return /*#__PURE__*/React.createElement(_.Block, _extends({
+  return /*#__PURE__*/_react.default.createElement(_.Block, _extends({
     className: (0, _classnames.default)(_TabsModule.default.content, className)
   }, rest));
 };
@@ -86,7 +90,7 @@ const Tab = _ref4 => {
   } = _ref4,
       rest = _objectWithoutProperties(_ref4, _excluded4);
 
-  return /*#__PURE__*/React.createElement(_.Button, _extends({
+  return /*#__PURE__*/_react.default.createElement(_.Button, _extends({
     className: (0, _classnames.default)(_TabsModule.default.tab, className, active ? _TabsModule.default.active : ""),
     design: active ? "default" : "secondary"
   }, rest));

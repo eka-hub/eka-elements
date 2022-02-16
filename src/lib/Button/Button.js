@@ -42,7 +42,7 @@ Button.propTypes = {
   icon: PropTypes.string,
   iconRight: PropTypes.bool,
   iconSpin: PropTypes.bool,
-  design: PropTypes.oneOf(["default", "border", "secondary", "empty"]),
+  design: PropTypes.oneOf(["default", "border", "secondary", "empty", "danger"]),
   to: PropTypes.string,
   newTab: PropTypes.bool,
   children: PropTypes.string,

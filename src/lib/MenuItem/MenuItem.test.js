@@ -65,5 +65,17 @@ describe("MenuItem test", () => {
     expect(item).toHaveClass("menu-item active");
   });
 
+  test("Should be a subactive", () => {
+    const { container } = render(
+      <MemoryRouter>
+        <MenuItem to="/calendar" icon="calendar" subactive>
+          {content}
+        </MenuItem>
+      </MemoryRouter>
+    );
+    const item = container.querySelector("a.menu-item");
+    expect(item).toHaveClass("menu-item sub-active");
+  });
+
   test.todo("Should change location");
 });

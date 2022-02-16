@@ -60,7 +60,7 @@ Button.propTypes = {
   icon: _propTypes.default.string,
   iconRight: _propTypes.default.bool,
   iconSpin: _propTypes.default.bool,
-  design: _propTypes.default.oneOf(["default", "border", "secondary", "empty"]),
+  design: _propTypes.default.oneOf(["default", "border", "secondary", "empty", "danger"]),
   to: _propTypes.default.string,
   newTab: _propTypes.default.bool,
   children: _propTypes.default.string,

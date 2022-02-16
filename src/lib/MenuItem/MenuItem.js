@@ -5,9 +5,22 @@ import css from "./MenuItem.module.scss";
 import { Dot, Icon } from "..";
 import { Link } from "react-router-dom";
 
-const MenuItem = ({ className = "", to = "", icon = "", active = false, children = "", indicate = false, ...rest }) => {
+const MenuItem = ({
+  className = "",
+  to = "",
+  icon = "",
+  active = false,
+  subactive = false,
+  children = "",
+  indicate = false,
+  ...rest
+}) => {
   return (
-    <Link to={to} className={cn(className, css["menu-item"], active && css["active"])} {...rest}>
+    <Link
+      to={to}
+      className={cn(className, css["menu-item"], active && css["active"], subactive && css["sub-active"])}
+      {...rest}
+    >
       {icon && <Icon icon={icon} />}
       {children}
       {indicate && <Dot className={css["indicator"]} state="active" />}

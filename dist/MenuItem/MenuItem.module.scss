@@ -41,7 +41,7 @@
   }
 
   // states
-  &:hover:not(:disabled, &.active) {
+  &:hover:not(:disabled, &.active), &.sub-active {
     cursor: pointer;
     background-color: $light-02;
     @include dark-mode {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Tabs, Icon, TabsRow, Tab, TabContent } from "../lib";
+import { Tabs, TabsRow, Tab, TabContent } from "../lib";
 
 const Div = ({ ...rest }) => <div style={{ margin: "10px", display: "flex", gap: "10px" }} {...rest} />;
 

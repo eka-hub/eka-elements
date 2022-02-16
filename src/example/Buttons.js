@@ -27,7 +27,7 @@ const Buttons = () => {
         <Button to="/home" newTab design="secondary" icon="shield-cross" iconRight>
           Click
         </Button>
-        <Button design="secondary">Click</Button>
+        <Button design="danger">Click</Button>
         <Button design="secondary" icon="heart" />
         <Button design="secondary" icon="bluetooth-circle" disabled>
           Click

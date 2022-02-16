@@ -1,7 +1,6 @@
 @import "../constants.scss";
 
 .input-wrapper {
-  width: 208px;
   display: flex;
   flex-direction: column;
 
@@ -37,6 +36,7 @@
     outline-color: $accent-01;
     text-decoration: none;
     width: 100%;
+    box-sizing: border-box;
 
     input {
       appearance: none;
