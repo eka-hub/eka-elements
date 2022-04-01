@@ -52,11 +52,11 @@ body {
 
 // styles for dark mode
 @mixin dark-mode() {
-  @media (prefers-color-scheme: dark) {
-    @at-root #{selector-nest('body:not([dark-mode]):not([dark-mode])', &)} {
-      @content;
-    }
-  }
+  // @media (prefers-color-scheme: dark) {
+  //   @at-root #{selector-nest('body:not([dark-mode])', &)} {
+  //     @content;
+  //   }
+  // }
   @at-root #{selector-nest('body[dark-mode]', &)} {
     @content;
   }
