@@ -11,6 +11,7 @@ import Select from "./Select/Select";
 import { Tabs, TabsRow, TabContent, Tab } from "./Tabs/Tabs";
 
 import useDarkMode from "./_hooks/useDarkMode";
+import useConnection from "./_hooks/useConnection";
 
 export {
   Button,
@@ -28,4 +29,5 @@ export {
   TabContent,
   Tab,
   useDarkMode,
+  useConnection,
 };

@@ -37,6 +37,11 @@ body {
   background-color: $grey-01;
 }
 
+[no-connection] * {
+  filter: grayscale(100%);
+}
+
+
 ::selection {
   background: $accent-03;
 }

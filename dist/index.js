@@ -87,6 +87,12 @@ Object.defineProperty(exports, "Toggle", {
     return _Toggle.default;
   }
 });
+Object.defineProperty(exports, "useConnection", {
+  enumerable: true,
+  get: function get() {
+    return _useConnection.default;
+  }
+});
 Object.defineProperty(exports, "useDarkMode", {
   enumerable: true,
   get: function get() {
@@ -117,5 +123,7 @@ var _Select = _interopRequireDefault(require("./Select/Select"));
 var _Tabs = require("./Tabs/Tabs");
 
 var _useDarkMode = _interopRequireDefault(require("./_hooks/useDarkMode"));
+
+var _useConnection = _interopRequireDefault(require("./_hooks/useConnection"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
